@@ -1,10 +1,27 @@
 def intersection(arrays):
     """
     YOUR CODE HERE
+
     """
     # Your code here
+    cache={
 
+    }
+    result =[]
+    for result_list in arrays:
+        result= result + result_list
+        # enter numbers in dict
+    list_volume = len(arrays)
+
+    for numbers in result:
+        if numbers in cache:
+            cache[numbers] += 1
+        else:
+            cache[numbers] = 1
+
+    result = [key for key, value in cache.items() if value == list_volume]#using a list coph
     return result
+
 
 
 if __name__ == "__main__":
